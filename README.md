@@ -24,9 +24,9 @@ npm run build
 
 ## Deploy
 
-Pushes to `main` automatically deploy to GitHub Pages via the included workflow.
+Pushes to `main` automatically build and push the `dist/` folder to the `gh-pages` branch via the included workflow.
 
-Go to **Settings → Pages** in your repository and set the source to **GitHub Actions**.
+Go to **Settings → Pages** in your repository, set the source to **"Deploy from a branch"**, and select the `gh-pages` branch.
 
 ## Project structure
 

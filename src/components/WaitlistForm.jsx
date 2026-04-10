@@ -1,18 +1,34 @@
 import { useState } from 'react'
 
+const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID
+
 export default function WaitlistForm({ light = false }) {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setError('Please enter a valid email.')
       return
     }
     setError('')
-    setSubmitted(true)
+    setLoading(true)
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (!res.ok) throw new Error()
+      setSubmitted(true)
+    } catch {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (submitted) {
@@ -50,13 +66,14 @@ export default function WaitlistForm({ light = false }) {
         </div>
         <button
           type="submit"
-          className={`shrink-0 px-6 py-3.5 rounded-xl text-sm font-bold transition-all shadow-md hover:shadow-lg active:scale-95
+          disabled={loading}
+          className={`shrink-0 px-6 py-3.5 rounded-xl text-sm font-bold transition-all shadow-md hover:shadow-lg active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed
             ${light
               ? 'bg-white text-brand-700 hover:bg-brand-50'
               : 'bg-brand-600 text-white hover:bg-brand-700'
             }`}
         >
-          Get Early Access
+          {loading ? 'Sending...' : 'Get Early Access'}
         </button>
       </div>
     </form>
