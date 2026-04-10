@@ -5,7 +5,7 @@ const problems = [
   {
     Icon: IconCycle,
     title: 'Consistency is the hardest part',
-    body: 'People start with great intentions. Routines break, motivation fades, and progress stalls — regardless of age.',
+    body: 'People start with great intentions. Routines break, motivation fades, and progress stalls regardless of age.',
   },
   {
     Icon: IconUsers,
@@ -20,7 +20,7 @@ const problems = [
   {
     Icon: IconLayers,
     title: 'Every tool lives in a silo',
-    body: 'Apps for sleep, apps for workouts, apps for learning — none of them talk to each other or adapt to you.',
+    body: 'Apps for sleep, apps for workouts, apps for learning. None of them talk to each other or adapt to you.',
   },
 ]
 

@@ -2,16 +2,16 @@ import useReveal from '../hooks/useReveal'
 import { IconEye, IconBell, IconSprout, IconStar, IconBarChart, IconShield, IconActivity, IconFlag } from './Icons'
 
 const kids = [
-  { Icon: IconEye,     title: 'Full visibility for parents', body: 'See what habits your child is building, where they shine, and where they need support — without micromanaging.' },
+  { Icon: IconEye,     title: 'Full visibility for parents', body: 'See what habits your child is building, where they shine, and where they need support. No micromanaging required.' },
   { Icon: IconBell,    title: 'Less reminding, more doing', body: "VivaHut handles the daily prompts so you don't have to. Kids respond better to a system than a lecture." },
-  { Icon: IconSprout,  title: 'Structured development', body: 'Learning, movement, and healthy habits — woven into a routine that grows with your child.' },
+  { Icon: IconSprout,  title: 'Structured development', body: 'Learning, movement, and healthy habits woven into a routine that grows with your child.' },
   { Icon: IconStar,    title: 'Designed to stay engaging', body: 'Streaks, milestones, and progress rewards keep kids motivated without screens as a substitute for effort.' },
 ]
 
 const athletes = [
   { Icon: IconBarChart,  title: 'Track consistency above all', body: 'Showing up is 90% of performance. VivaHut tracks your adherence to routines, not just your peak results.' },
   { Icon: IconShield,    title: 'Build real discipline', body: 'Replace willpower with systems. VivaHut makes the right action the path of least resistance every day.' },
-  { Icon: IconActivity,  title: 'Optimize your daily structure', body: 'Sleep, movement, recovery, focus — see how the pieces connect and where your performance leaks.' },
+  { Icon: IconActivity,  title: 'Optimize your daily structure', body: 'Sleep, movement, recovery, focus. See how the pieces connect and where your performance leaks.' },
   { Icon: IconFlag,      title: 'Designed for long-term gains', body: 'No crash-and-burn motivation cycles. VivaHut is built for athletes who play the long game.' },
 ]
 

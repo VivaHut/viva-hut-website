@@ -13,7 +13,7 @@ export default function Footer() {
 
         {/* Tagline */}
         <p className="text-gray-500 text-sm text-center">
-          Build better habits — at any age.
+          Build better habits at any age.
         </p>
 
         {/* Legal */}

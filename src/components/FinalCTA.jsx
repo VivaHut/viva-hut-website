@@ -32,7 +32,7 @@ export default function FinalCTA() {
 
         <p className="text-white/70 text-lg mb-10 max-w-lg mx-auto leading-relaxed">
           Whether you're a parent building a foundation for your child
-          or an individual who refuses to plateau —
+          or an individual who refuses to plateau,
           VivaHut is being built for you.
         </p>
 

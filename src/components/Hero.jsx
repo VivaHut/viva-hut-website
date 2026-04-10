@@ -1,6 +1,9 @@
+import useHeroScroll from '../hooks/useHeroScroll'
 import WaitlistForm from './WaitlistForm'
 
 export default function Hero() {
+  const { firing } = useHeroScroll()
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 pt-24 pb-20 overflow-hidden">
 
@@ -14,7 +17,7 @@ export default function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-8 animate-fade-in">
           <span className="w-1.5 h-1.5 bg-brand-500 rounded-full animate-pulse-slow" />
-          Coming Soon — Join the Waitlist
+          Coming Soon · Join the Waitlist
         </div>
 
         {/* Headline */}
@@ -27,7 +30,7 @@ export default function Hero() {
         {/* Subheadline */}
         <p className="text-lg sm:text-xl text-gray-500 font-medium max-w-2xl mx-auto mb-4 leading-relaxed animate-fade-up delay-100 anim-hidden">
           For kids who need structure and parents who want peace of mind.
-          For adults who want to perform at their best — every single day.
+          For adults who want to perform at their best, every single day.
         </p>
 
         {/* Audience labels */}
@@ -53,10 +56,16 @@ export default function Hero() {
         </p>
 
         {/* Scroll indicator */}
-        <div className="mt-16 flex justify-center animate-fade-up delay-500 anim-hidden">
+        <div
+          className="mt-16 flex justify-center animate-fade-up delay-500 anim-hidden transition-all duration-700"
+          style={firing ? { opacity: 0, transform: 'translateY(12px)' } : {}}
+        >
           <div className="flex flex-col items-center gap-2 text-gray-400">
             <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
-            <div className="w-px h-10 bg-gradient-to-b from-gray-300 to-transparent" />
+            <div
+              className="w-px bg-gradient-to-b from-gray-300 to-transparent transition-all duration-700"
+              style={firing ? { height: '40px', opacity: 0 } : { height: '40px' }}
+            />
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ export default function Solution() {
             <p className="text-gray-500 text-base leading-relaxed mb-8">
               VivaHut brings together habit building, movement, and performance
               into a single adaptive system. It watches how you behave, not just
-              what you plan — then nudges you at the right moment.
+              what you plan, then nudges you at the right moment.
             </p>
 
             <ul className="space-y-3">
@@ -87,7 +87,7 @@ export default function Solution() {
               {/* Center text */}
               <div className="mt-6 bg-white/10 border border-white/20 rounded-2xl p-4 relative z-10 text-center">
                 <p className="text-white font-bold text-sm">Unified. Adaptive. Personal.</p>
-                <p className="text-white/60 text-xs mt-0.5">One platform — every habit.</p>
+                <p className="text-white/60 text-xs mt-0.5">One platform, every habit.</p>
               </div>
             </div>
           </div>

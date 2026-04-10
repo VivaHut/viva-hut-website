@@ -10,7 +10,7 @@ const benefits = [
   {
     Icon: IconShield,
     title: 'Builds long-term discipline',
-    body: 'Not a crash diet of motivation — a steady, compounding architecture for behavior that lasts.',
+    body: 'Not a crash diet of motivation. A steady, compounding architecture for behavior that lasts.',
   },
   {
     Icon: IconShuffle,
@@ -25,7 +25,7 @@ const benefits = [
   {
     Icon: IconGlobe,
     title: 'Connects the right services',
-    body: 'VivaHut surfaces relevant tools, people, and resources in context — not as ads, but as answers.',
+    body: 'VivaHut surfaces relevant tools, people, and resources in context. Not as ads, but as answers.',
   },
   {
     Icon: IconWifi,
@@ -54,7 +54,7 @@ export default function Benefits() {
             What you actually gain.
           </h2>
           <p className="text-gray-400 mt-4 max-w-xl mx-auto text-base">
-            Not a list of features — the outcomes that change how you live and perform.
+            Not a list of features. The outcomes that change how you live and perform.
           </p>
         </div>
 
