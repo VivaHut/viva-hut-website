@@ -1,8 +1,6 @@
-import useHeroScroll from '../hooks/useHeroScroll'
 import WaitlistForm from './WaitlistForm'
 
 export default function Hero() {
-  const { firing } = useHeroScroll()
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 pt-24 pb-20 overflow-hidden">
@@ -56,16 +54,10 @@ export default function Hero() {
         </p>
 
         {/* Scroll indicator */}
-        <div
-          className="mt-16 flex justify-center animate-fade-up delay-500 anim-hidden transition-all duration-700"
-          style={firing ? { opacity: 0, transform: 'translateY(12px)' } : {}}
-        >
+        <div className="mt-16 flex justify-center animate-fade-up delay-500 anim-hidden">
           <div className="flex flex-col items-center gap-2 text-gray-400">
             <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
-            <div
-              className="w-px bg-gradient-to-b from-gray-300 to-transparent transition-all duration-700"
-              style={firing ? { height: '40px', opacity: 0 } : { height: '40px' }}
-            />
+            <div className="w-px h-10 bg-gradient-to-b from-gray-300 to-transparent" />
           </div>
         </div>
       </div>
